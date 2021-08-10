@@ -9,31 +9,35 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:customTouchbar.ping",
+    "onCommand:customTouchbar.goToDeclaration",
+    "onCommand:customTouchbar.splitEditor"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "custom-touchbar.ping",
+        "command": "customTouchbar.ping",
         "title": "Verify TouchBar customizations"
       },
       {
-        "command": "custom-touchbar.goToDeclaration",
+        "command": "customTouchbar.goToDeclaration",
         "title": "Show declaration"
       },
       {
-        "command": "custom-touchbar.splitEditor",
+        "command": "customTouchbar.splitEditor",
         "title": "Split editor"
       }
     ],
     "menus": {
       "touchBar": [
         {
-          "command": "custom-touchbar.goToDeclaration",
+          "command": "customTouchbar.goToDeclaration",
           "group": "editing"
         },
         {
-          "command": "custom-touchbar.splitEditor",
+          "command": "customTouchbar.splitEditor",
           "group": "editing"
         }
       ]

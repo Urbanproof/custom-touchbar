@@ -5,15 +5,15 @@ const vscode = require('vscode');
  */
 function activate(context) {
 
-	const ping = vscode.commands.registerCommand('custom-touchbar.ping', () => {
+	const ping = vscode.commands.registerCommand('customTouchbar.ping', () => {
 		vscode.window.showInformationMessage('Pong');
 	});
 
-	const goTo = vscode.commands.registerCommand('custom-touchbar.goToDeclaration', () => {
+	const goTo = vscode.commands.registerCommand('customTouchbar.goToDeclaration', () => {
 		vscode.commands.executeCommand('editor.action.goToDeclaration');
 	});
 
-	const split = vscode.commands.registerCommand('custom-touchbar.goToDeclaration', () => {
+	const split = vscode.commands.registerCommand('customTouchbar.splitEditor', () => {
 		vscode.commands.executeCommand('workbench.action.splitEditor');
 	});
 

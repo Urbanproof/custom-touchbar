@@ -1,0 +1,58 @@
+{
+  "name": "custom-touchbar",
+  "displayName": "Custom TouchBar",
+  "description": "My own set of TouchBar customizations",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.59.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "custom-touchbar.ping",
+        "title": "Verify TouchBar customizations"
+      },
+      {
+        "command": "custom-touchbar.goToDeclaration",
+        "title": "Show declaration"
+      },
+      {
+        "command": "custom-touchbar.splitEditor",
+        "title": "Split editor"
+      }
+    ],
+    "menus": {
+      "touchBar": [
+        {
+          "command": "custom-touchbar.goToDeclaration",
+          "group": "editing"
+        },
+        {
+          "command": "custom-touchbar.splitEditor",
+          "group": "editing"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.59.0",
+    "eslint": "^7.27.0",
+    "glob": "^7.1.7",
+    "mocha": "^8.4.0",
+    "typescript": "^4.3.2",
+    "vscode-test": "^1.5.2"
+  }
+}
